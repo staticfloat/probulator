@@ -2,7 +2,7 @@
 
 import random, string
 
-max_len = 2048
+max_len = 1024*16
 choices = ' ' + string.ascii_letters + ' ' + string.digits + ' '
 
 for l in range(max_len):
