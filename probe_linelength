@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
-import random, string
+import random, string, sys
 
-max_len = 1024*16
+max_len = 1024*2
 choices = ' ' + string.ascii_letters + ' ' + string.digits + ' '
 
 for l in range(max_len):
-	print '[%d]'%(l), ''.join(random.choice(choices) for x in range(l))
+	s = '[%d] %s\n'%(l, ''.join(random.choice(choices) for x in range(l)))
+	sys.stdout.write('STDOUT: %s\n'%(s))
+	sys.stderr.write('STDERR: %s\n'%(s))
